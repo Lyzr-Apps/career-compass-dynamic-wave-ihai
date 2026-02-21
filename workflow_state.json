@@ -1,0 +1,24 @@
+{
+  "agents": {
+    "resume_analyzer": {
+      "agent_id": "69996b8b771423cce61cd10f",
+      "name": "Resume Analyzer Agent"
+    },
+    "skill_gap_detector": {
+      "agent_id": "69996b9a82d9195c9e524bda",
+      "name": "Skill Gap Detector Agent"
+    },
+    "learning_roadmap": {
+      "agent_id": "69996bac9f3636d6dd809807",
+      "name": "Learning Roadmap Agent"
+    },
+    "interview_simulation": {
+      "agent_id": "69996bc13f15947a386b5b94",
+      "name": "Interview Simulation Agent"
+    },
+    "progress_tracker": {
+      "agent_id": "69996bd682d9195c9e524be0",
+      "name": "Progress Tracker Agent"
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "agent_name": "Interview Simulation Agent",
+  "agent_id": "69996bc13f15947a386b5b94",
+  "agent_type": "json",
+  "accessor": "json",
+  "has_module_outputs": false,
+  "response_schema": {
+    "type": { "type": "string" },
+    "question": { "type": "string" },
+    "question_number": { "type": "number" },
+    "difficulty": { "type": "string" },
+    "feedback": {
+      "type": "object",
+      "properties": {
+        "score": { "type": "number" },
+        "strengths": { "type": "string" },
+        "improvements": { "type": "string" },
+        "ideal_answer": { "type": "string" }
+      },
+      "required": ["score", "strengths", "improvements", "ideal_answer"],
+      "additionalProperties": false
+    },
+    "session_summary": {
+      "type": "object",
+      "properties": {
+        "total_questions": { "type": "number" },
+        "average_score": { "type": "number" },
+        "overall_feedback": { "type": "string" },
+        "strengths_list": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "improvement_areas": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "required": ["total_questions", "average_score", "overall_feedback", "strengths_list", "improvement_areas"],
+      "additionalProperties": false
+    }
+  }
+}

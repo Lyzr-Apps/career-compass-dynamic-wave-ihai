@@ -1,0 +1,67 @@
+{
+  "workflow": {
+    "nodes": [
+      { "id": "input_node", "type": "Input", "label": "Student Profile Input", "nodeCategory": "input" },
+      { "id": "resume_analyzer", "type": "Agent", "label": "Resume Analyzer Agent", "nodeCategory": "agent" },
+      { "id": "skill_gap_detector", "type": "Agent", "label": "Skill Gap Detector Agent", "nodeCategory": "agent" },
+      { "id": "learning_roadmap", "type": "Agent", "label": "Learning Roadmap Agent", "nodeCategory": "agent" },
+      { "id": "interview_simulation", "type": "Agent", "label": "Interview Simulation Agent", "nodeCategory": "agent" },
+      { "id": "progress_tracker", "type": "Agent", "label": "Progress Tracker Agent", "nodeCategory": "agent" },
+      { "id": "output_node", "type": "Output", "label": "Career Dashboard Output", "nodeCategory": "end" }
+    ],
+    "edges": [
+      { "source": "input_node", "target": "resume_analyzer" },
+      { "source": "input_node", "target": "skill_gap_detector" },
+      { "source": "input_node", "target": "learning_roadmap" },
+      { "source": "input_node", "target": "interview_simulation" },
+      { "source": "input_node", "target": "progress_tracker" },
+      { "source": "resume_analyzer", "target": "output_node" },
+      { "source": "skill_gap_detector", "target": "output_node" },
+      { "source": "learning_roadmap", "target": "output_node" },
+      { "source": "interview_simulation", "target": "output_node" },
+      { "source": "progress_tracker", "target": "output_node" }
+    ]
+  },
+  "agents": {
+    "resume_analyzer": {
+      "agent_id": "69996b8b771423cce61cd10f",
+      "name": "Resume Analyzer Agent",
+      "provider": "openai",
+      "model": "gpt-4.1",
+      "temperature": 0.3,
+      "top_p": 1
+    },
+    "skill_gap_detector": {
+      "agent_id": "69996b9a82d9195c9e524bda",
+      "name": "Skill Gap Detector Agent",
+      "provider": "openai",
+      "model": "gpt-4.1",
+      "temperature": 0.3,
+      "top_p": 1
+    },
+    "learning_roadmap": {
+      "agent_id": "69996bac9f3636d6dd809807",
+      "name": "Learning Roadmap Agent",
+      "provider": "perplexity",
+      "model": "sonar-pro",
+      "temperature": 0.4,
+      "top_p": 0.95
+    },
+    "interview_simulation": {
+      "agent_id": "69996bc13f15947a386b5b94",
+      "name": "Interview Simulation Agent",
+      "provider": "openai",
+      "model": "gpt-4.1",
+      "temperature": 0.5,
+      "top_p": 0.95
+    },
+    "progress_tracker": {
+      "agent_id": "69996bd682d9195c9e524be0",
+      "name": "Progress Tracker Agent",
+      "provider": "openai",
+      "model": "gpt-4.1",
+      "temperature": 0.3,
+      "top_p": 1
+    }
+  }
+}

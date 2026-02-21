@@ -1,0 +1,48 @@
+{
+  "agent_name": "Resume Analyzer Agent",
+  "agent_id": "69996b8b771423cce61cd10f",
+  "description": "Extracts skills, projects, and achievements from user's resume text. Evaluates resume strength across structure, impact metrics, action verbs, and clarity. Assigns a Resume Quality Score (1-100) with section-by-section improvement suggestions. Personalizes feedback based on target role.",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "response_schema": {
+    "overall_score": "number",
+    "summary": "string",
+    "sections": [
+      {
+        "name": "string",
+        "score": "number",
+        "feedback": "string",
+        "suggestions": [
+          "string"
+        ]
+      }
+    ],
+    "strengths": [
+      "string"
+    ],
+    "improvement_areas": [
+      "string"
+    ]
+  },
+  "example_response": {
+    "overall_score": 0,
+    "summary": "sample string",
+    "sections": [
+      {
+        "name": "sample string",
+        "score": 0,
+        "feedback": "sample string",
+        "suggestions": [
+          "sample string"
+        ]
+      }
+    ],
+    "strengths": [
+      "sample string"
+    ],
+    "improvement_areas": [
+      "sample string"
+    ]
+  }
+}

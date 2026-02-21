@@ -1,0 +1,46 @@
+{
+  "agent_name": "Skill Gap Detector Agent",
+  "agent_id": "69996b9a82d9195c9e524bda",
+  "description": "Compares the student's current skill profile against industry benchmarks for their target role. Identifies missing technical and soft skills. Categorizes each gap as Critical, Important, or Optional. Outputs a structured skill gap matrix with priority rankings.",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "response_schema": {
+    "total_gaps": "number",
+    "critical_count": "number",
+    "important_count": "number",
+    "optional_count": "number",
+    "skill_gaps": [
+      {
+        "skill_name": "string",
+        "current_level": "string",
+        "required_level": "string",
+        "category": "string",
+        "description": "string"
+      }
+    ],
+    "summary": "string",
+    "recommendations": [
+      "string"
+    ]
+  },
+  "example_response": {
+    "total_gaps": 0,
+    "critical_count": 0,
+    "important_count": 0,
+    "optional_count": 0,
+    "skill_gaps": [
+      {
+        "skill_name": "sample string",
+        "current_level": "sample string",
+        "required_level": "sample string",
+        "category": "sample string",
+        "description": "sample string"
+      }
+    ],
+    "summary": "sample string",
+    "recommendations": [
+      "sample string"
+    ]
+  }
+}

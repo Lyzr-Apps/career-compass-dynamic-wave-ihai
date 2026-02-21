@@ -1,0 +1,33 @@
+{
+  "agent_name": "Skill Gap Detector Agent",
+  "agent_id": "69996b9a82d9195c9e524bda",
+  "agent_type": "json",
+  "accessor": "json",
+  "has_module_outputs": false,
+  "response_schema": {
+    "total_gaps": { "type": "number" },
+    "critical_count": { "type": "number" },
+    "important_count": { "type": "number" },
+    "optional_count": { "type": "number" },
+    "skill_gaps": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "skill_name": { "type": "string" },
+          "current_level": { "type": "string" },
+          "required_level": { "type": "string" },
+          "category": { "type": "string" },
+          "description": { "type": "string" }
+        },
+        "required": ["skill_name", "current_level", "required_level", "category", "description"],
+        "additionalProperties": false
+      }
+    },
+    "summary": { "type": "string" },
+    "recommendations": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}

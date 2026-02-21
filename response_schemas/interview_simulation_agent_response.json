@@ -1,0 +1,54 @@
+{
+  "agent_name": "Interview Simulation Agent",
+  "agent_id": "69996bc13f15947a386b5b94",
+  "description": "Conducts adaptive mock interviews combining technical and behavioral questions tailored to the target role. Dynamically adjusts difficulty based on answer quality. After each answer, provides an Answer Quality Score, specific improvement feedback, and an ideal sample answer. Maintains conversation context throughout the session.",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "response_schema": {
+    "type": "string",
+    "question": "string",
+    "question_number": "number",
+    "difficulty": "string",
+    "feedback": {
+      "score": "number",
+      "strengths": "string",
+      "improvements": "string",
+      "ideal_answer": "string"
+    },
+    "session_summary": {
+      "total_questions": "number",
+      "average_score": "number",
+      "overall_feedback": "string",
+      "strengths_list": [
+        "string"
+      ],
+      "improvement_areas": [
+        "string"
+      ]
+    }
+  },
+  "example_response": {
+    "type": "sample string",
+    "question": "sample string",
+    "question_number": 0,
+    "difficulty": "sample string",
+    "feedback": {
+      "score": 0,
+      "strengths": "sample string",
+      "improvements": "sample string",
+      "ideal_answer": "sample string"
+    },
+    "session_summary": {
+      "total_questions": 0,
+      "average_score": 0,
+      "overall_feedback": "sample string",
+      "strengths_list": [
+        "sample string"
+      ],
+      "improvement_areas": [
+        "sample string"
+      ]
+    }
+  }
+}

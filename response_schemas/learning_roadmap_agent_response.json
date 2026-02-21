@@ -1,0 +1,50 @@
+{
+  "agent_name": "Learning Roadmap Agent",
+  "agent_id": "69996bac9f3636d6dd809807",
+  "description": "Builds a 4-12 week structured learning roadmap based on identified skill gaps, graduation timeline, and target role. Searches for current courses, certifications, project ideas, and hackathon opportunities. Prioritizes high-ROI skills and maps them to weekly milestones.",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "response_schema": {
+    "total_weeks": "number",
+    "target_role": "string",
+    "overall_progress": "number",
+    "weeks": [
+      {
+        "week_number": "number",
+        "theme": "string",
+        "milestones": [
+          {
+            "title": "string",
+            "type": "string",
+            "description": "string",
+            "priority": "string",
+            "completed": "boolean"
+          }
+        ]
+      }
+    ],
+    "summary": "string"
+  },
+  "example_response": {
+    "total_weeks": 0,
+    "target_role": "sample string",
+    "overall_progress": 0,
+    "weeks": [
+      {
+        "week_number": 0,
+        "theme": "sample string",
+        "milestones": [
+          {
+            "title": "sample string",
+            "type": "sample string",
+            "description": "sample string",
+            "priority": "sample string",
+            "completed": false
+          }
+        ]
+      }
+    ],
+    "summary": "sample string"
+  }
+}

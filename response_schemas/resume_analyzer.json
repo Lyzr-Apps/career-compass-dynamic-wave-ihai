@@ -1,0 +1,36 @@
+{
+  "agent_name": "Resume Analyzer Agent",
+  "agent_id": "69996b8b771423cce61cd10f",
+  "agent_type": "json",
+  "accessor": "json",
+  "has_module_outputs": false,
+  "response_schema": {
+    "overall_score": { "type": "number" },
+    "summary": { "type": "string" },
+    "sections": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string" },
+          "score": { "type": "number" },
+          "feedback": { "type": "string" },
+          "suggestions": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        },
+        "required": ["name", "score", "feedback", "suggestions"],
+        "additionalProperties": false
+      }
+    },
+    "strengths": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "improvement_areas": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "agent_name": "Learning Roadmap Agent",
+  "agent_id": "69996bac9f3636d6dd809807",
+  "agent_type": "json",
+  "accessor": "json",
+  "has_module_outputs": false,
+  "response_schema": {
+    "total_weeks": { "type": "number" },
+    "target_role": { "type": "string" },
+    "overall_progress": { "type": "number" },
+    "weeks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "week_number": { "type": "number" },
+          "theme": { "type": "string" },
+          "milestones": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "title": { "type": "string" },
+                "type": { "type": "string" },
+                "description": { "type": "string" },
+                "priority": { "type": "string" },
+                "completed": { "type": "boolean" }
+              },
+              "required": ["title", "type", "description", "priority", "completed"],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": ["week_number", "theme", "milestones"],
+        "additionalProperties": false
+      }
+    },
+    "summary": { "type": "string" }
+  }
+}

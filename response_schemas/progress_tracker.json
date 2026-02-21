@@ -1,0 +1,52 @@
+{
+  "agent_name": "Progress Tracker Agent",
+  "agent_id": "69996bd682d9195c9e524be0",
+  "agent_type": "json",
+  "accessor": "json",
+  "has_module_outputs": false,
+  "response_schema": {
+    "career_readiness_score": { "type": "number" },
+    "resume_score": { "type": "number" },
+    "skill_readiness_percentage": { "type": "number" },
+    "interview_average": { "type": "number" },
+    "plan_30_days": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "plan_60_days": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "plan_90_days": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "interview_performance": {
+      "type": "object",
+      "properties": {
+        "sessions_completed": { "type": "number" },
+        "average_score": { "type": "number" },
+        "best_score": { "type": "number" },
+        "trend": { "type": "string" },
+        "summary": { "type": "string" }
+      },
+      "required": ["sessions_completed", "average_score", "best_score", "trend", "summary"],
+      "additionalProperties": false
+    },
+    "skills_progress": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "skill_name": { "type": "string" },
+          "before_level": { "type": "string" },
+          "current_level": { "type": "string" },
+          "status": { "type": "string" }
+        },
+        "required": ["skill_name", "before_level", "current_level", "status"],
+        "additionalProperties": false
+      }
+    },
+    "overall_summary": { "type": "string" }
+  }
+}

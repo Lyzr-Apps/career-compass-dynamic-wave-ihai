@@ -1,0 +1,70 @@
+{
+  "agent_name": "Progress Tracker Agent",
+  "agent_id": "69996bd682d9195c9e524be0",
+  "description": "Compiles and analyzes the student's career preparation progress. Takes inputs from prior agent outputs (resume score, skill gaps addressed, roadmap items completed, interview scores). Calculates an overall Career Readiness Score, generates a 30/60/90 day plan summary, and tracks skill readiness improvements over time.",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "response_schema": {
+    "career_readiness_score": "number",
+    "resume_score": "number",
+    "skill_readiness_percentage": "number",
+    "interview_average": "number",
+    "plan_30_days": [
+      "string"
+    ],
+    "plan_60_days": [
+      "string"
+    ],
+    "plan_90_days": [
+      "string"
+    ],
+    "interview_performance": {
+      "sessions_completed": "number",
+      "average_score": "number",
+      "best_score": "number",
+      "trend": "string",
+      "summary": "string"
+    },
+    "skills_progress": [
+      {
+        "skill_name": "string",
+        "before_level": "string",
+        "current_level": "string",
+        "status": "string"
+      }
+    ],
+    "overall_summary": "string"
+  },
+  "example_response": {
+    "career_readiness_score": 0,
+    "resume_score": 0,
+    "skill_readiness_percentage": 0,
+    "interview_average": 0,
+    "plan_30_days": [
+      "sample string"
+    ],
+    "plan_60_days": [
+      "sample string"
+    ],
+    "plan_90_days": [
+      "sample string"
+    ],
+    "interview_performance": {
+      "sessions_completed": 0,
+      "average_score": 0,
+      "best_score": 0,
+      "trend": "sample string",
+      "summary": "sample string"
+    },
+    "skills_progress": [
+      {
+        "skill_name": "sample string",
+        "before_level": "sample string",
+        "current_level": "sample string",
+        "status": "sample string"
+      }
+    ],
+    "overall_summary": "sample string"
+  }
+}
